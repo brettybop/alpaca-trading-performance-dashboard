@@ -8,9 +8,9 @@ This project is part of a broader portfolio focused on **real trading data**, **
 
 ## 🎯 Project Objective
 
-Answer one core question:
+Core question:
 
-> “Is my Alpaca trading strategy actually working – and where exactly is it strong or weak?”
+> “Is my Alpaca trading strategy actually working – and where exactly is it strong or weak? Specifically, which times of day on what tickers per the strategy?”
 
 To do that, the project:
 
