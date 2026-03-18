@@ -77,6 +77,7 @@ This project is built around a Python-to-Power-BI workflow:
 │
 └─ powerbi/
     └─ Alpaca_Trading_Performance.pbix
+```
 
 ## 📁 Data Pipeline
 
