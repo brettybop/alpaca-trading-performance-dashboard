@@ -1,105 +1,79 @@
-# Alpaca Trading Performance – Python + Power BI
+# Alpaca Trading Performance Dashboard | Python + Power BI
 
-A Python + Power BI project that transforms raw Alpaca trade history into a clean analytics model and an interactive trading performance dashboard.
+A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting.
 
-This project is part of a broader portfolio focused on **real trading data**, **reproducible ETL**, and **professional BI modeling**.
-
----
-
-## 🎯 Project Objective
-
-Core question:
-
-> “Is my Alpaca trading strategy actually working – and where exactly is it strong or weak? Specifically, which times of day on what tickers per the strategy?”
-
-To do that, the project:
-
-- Extracts trade data (from Alpaca export or API)
-- Cleans and aggregates trades to position / session level
-- Builds a star-schema-style model for analysis
-- Surfaces performance metrics in a polished Power BI report
+This project is part of my analytics portfolio and demonstrates how Python can be used to extract and shape live trading data, while Power BI handles modeling, DAX measures, and dashboard presentation.
 
 ---
 
-## 📊 Key Business Questions
+## Project Objective
 
-The dashboard is designed to answer:
+The goal of this project is to answer a simple but important question:
 
-- What is my **overall performance** (P&L, win rate, expectancy)?
-- Which **symbols** and **strategies** are truly profitable?
-- When do I perform best/worst (**day of week**, **time of day**, **market regime**)?
-- How deep are my **drawdowns**, and how long does recovery take?
-- How does performance change with **holding time**, **position size**, or **side** (long vs short)?
+> Is this trading strategy actually performing well, and when does it perform best?
 
----
+To answer that, I built a lightweight ETL workflow in Python that pulls Alpaca order history, converts order activity into trade-level analytics, and exports a CSV dataset that feeds a Power BI dashboard.
 
-## 🧱 Architecture & Flow
-
-High-level flow:
-
-1. **Data Source**  
-   - Alpaca trade history (CSV export or API pull)
-
-2. **Python ETL (`src/`)**  
-   - Clean raw fills
-   - Construct `fact_trades` table
-   - Derive fields (R-multiple, holding period, realized P&L, trade tags)
-   - Export `data/processed/trades_model_input.csv`
-
-3. **Power BI Data Model (`powerbi/Alpaca_Trading_Performance.pbix`)**  
-   - Load the processed CSV
-   - Create dimensions: calendar, symbol, strategy
-   - Build DAX measures for KPIs and time-intelligence
-
-4. **Power BI Report Pages**  
-   - Overview KPIs + Equity Curve
-   - Symbol & Strategy Breakdown
-   - Time-of-Day / Day-of-Week performance
-   - Risk / Drawdown view
+The report is designed to evaluate:
+- overall strategy performance
+- trade quality and edge
+- intraday timing edge
+- symbol-level profitability
+- performance over time
 
 ---
 
-## 🛠 Tech Stack
+## Architecture Overview
 
-- **Python**
-  - `pandas` for cleaning / feature engineering
-  - `python-dotenv` for reading API keys (optional)
-  - `requests` / `alpaca-py` if you pull directly via API
+This project is built around a Python-to-Power-BI workflow:
 
-- **Power BI**
-  - Power Query for final shaping
-  - Star schema data model
-  - DAX for metrics (win rate, expectancy, drawdown, time intelligence)
+1. **YAML Configuration**
+   - Stores Alpaca API credentials and runtime parameters such as date range and position size.
 
-- **Version Control**
-  - Git + GitHub for reproducible, portfolio-ready project
+2. **Python ETL Script**
+   - Pulls order history from Alpaca
+   - Reconstructs closed trades using FIFO logic
+   - Derives BI-friendly fields such as:
+     - realized PnL
+     - win flag
+     - close date
+     - day of week
+     - hour of day
+     - holding time
+   - Exports CSV outputs used by Power BI
+
+3. **OneDrive Refresh Layer**
+   - The Python script writes the output CSV into a OneDrive-backed folder
+   - The Power BI report points to that folder
+   - When the CSV is replaced and Power BI is refreshed, the dashboard updates automatically
+
+4. **Power BI Dashboard**
+   - Uses DAX measures and supporting dimension tables
+   - Surfaces strategy performance through interactive visuals and KPI pages
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 .
 ├─ README.md
-├─ .gitignore
 ├─ requirements.txt
-├─ .env.example
+├─ .gitignore
+├─ LICENSE
 │
-├─ data/
-│   ├─ raw/
-│   │   └─ sample_trades.csv              # small example dataset
-│   └─ processed/
-│       └─ trades_model_input.csv         # model input for Power BI
+├─ config/
+│   └─ paper_main_config_example.yml
 │
 ├─ src/
-│   ├─ 01_download_trades.py              # optional: call Alpaca API
-│   ├─ 02_build_fact_trades.py            # ETL → trades_model_input.csv
-│   └─ utils.py                           # helper functions
+│   └─ main_ingestion.py
 │
-├─ powerbi/
-│   └─ Alpaca_Trading_Performance.pbix    # main report
+├─ data/
+│   └─ processed/
+│       ├─ orders_pnl.csv
+│       ├─ orders_realized.csv
+│       ├─ orders_trades.csv
+│       └─ orders_trades_daily.csv
 │
-└─ docs/
-    ├─ project_overview.md
-    ├─ data_model.md
-    └─ dax_measures.md
+└─ powerbi/
+    └─ Alpaca_Trading_Performance.pbix
