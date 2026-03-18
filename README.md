@@ -77,3 +77,42 @@ This project is built around a Python-to-Power-BI workflow:
 │
 └─ powerbi/
     └─ Alpaca_Trading_Performance.pbix
+
+## 📁 Data Pipeline
+
+The Python script is the core data engine behind the dashboard.
+
+1. **Inputs**
+
+- Alpaca Order History
+- YAML configuration file containing:
+   - API key
+   - secret key
+   - API base URL
+   - date range
+   - position size
+   - optional symbol list
+
+2. **Transformations**
+
+The ETL script:
+- retrieves Alpaca order history
+- keeps all order records for auditability
+- identifies executed trades using filled order data
+- reconstructs closed lots using FIFO logic
+- calculates realized trade-level PnL
+- derives time-based features for BI analysis
+
+3. **Outputs**
+
+The script writes the following CSVs:
+- orders_pnl.csv
+   - all orders with order-level realized PnL attribution where applicable
+- orders_realized.csv
+   - subset of orders with non-zero realized PnL
+- orders_trades.csv
+   - primary fact table used for trade-level analysis in Power BI
+- orders_trades_daily.csv
+   - daily summary by close date and symbol
+
+## 📁 POWER BI DASHBOARD PAGES
