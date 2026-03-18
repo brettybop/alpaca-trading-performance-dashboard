@@ -1,4 +1,4 @@
-# Alpaca Trading Performance Dashboard | Python + Power BI
+# Alpaca Trading Perf Dashboard | Python + Power BI
 
 A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting.
 
@@ -6,7 +6,7 @@ This project is part of my analytics portfolio and demonstrates how Python can b
 
 ---
 
-## Project Objective
+## 🎯 Project Objective
 
 The goal of this project is to answer a simple but important question:
 
@@ -23,7 +23,7 @@ The report is designed to evaluate:
 
 ---
 
-## Architecture Overview
+## 🧱 Architecture Overview
 
 This project is built around a Python-to-Power-BI workflow:
 
@@ -53,7 +53,7 @@ This project is built around a Python-to-Power-BI workflow:
 
 ---
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 .
