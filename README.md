@@ -79,7 +79,7 @@ This project is built around a Python-to-Power-BI workflow:
     └─ Alpaca_Trading_Performance.pbix
 ```
 
-## 📁 Data Pipeline
+## 📊 Data Pipeline
 
 The Python script is the core data engine behind the dashboard.
 
@@ -116,4 +116,157 @@ The script writes the following CSVs:
 - orders_trades_daily.csv
    - daily summary by close date and symbol
 
-## 📁 POWER BI DASHBOARD PAGES
+## 🗐 Power BI Dashboard Pages
+
+**Intro Page**
+
+A landing page for the report that introduces the project and serves as a navigation hub for the dashboard.
+
+**01 – Performance Overview**
+
+This page provides the executive summary of the strategy.
+
+Key metrics include:
+- Win Rate
+- Total Trades
+- Total PnL
+- Profit Factor
+- Expectancy
+- Profit by Symbol
+- Average Win
+- Average Loss
+- Number of Winners
+- Number of Losers
+- Average Hold Time
+
+This page answers:
+1. How is the strategy performing overall?
+2. Is the edge statistically and financially meaningful?
+3. Which symbols are driving results?
+
+**02 – Time Heatmap**
+
+This page uses `DIM_HOUR` and `DIM_WEEKDAY` with audit measures to visualize Total PnL in a heatmap matrix.
+
+Green and red shading highlight the strongest and weakest time windows.
+
+This page answers:
+1. Which days and hours produce the strongest performance?
+2. Where does the strategy consistently lose money?
+
+**03 – Time by Symbol Analysis**
+
+This page drills into intraday performance by symbol, specifically between 6:00 AM and 10:00 AM.
+
+Built primarily from FACT_TRADES, it uses a line and clustered column chart to analyze PnL by hour and by symbol.
+
+This page answers:
+
+When do winning trades happen?
+
+Does timing edge vary across symbols?
+
+Are certain symbols stronger at specific hours?
+
+**04 – PnL Curve**
+
+This page plots Total PnL over Date from the Calendar table.
+
+It provides a time-based view of performance and helps evaluate strategy consistency.
+
+This page answers:
+1. How has performance evolved over time?
+2. Are returns steady or volatile?
+3. Where are the major drawdowns and recoveries?
+
+## 📝 Data Model Notes
+This project primarily relies on Python for transformation logic and Power BI for semantic modeling and measures.
+
+Core model components include:
+
+FACT_TRADES
+
+DIM_HOUR
+
+DIM_WEEKDAY
+
+Calendar
+
+Audit Measures
+
+No SQL was used in this project. The heavy lifting is performed in Python, with Power BI handling DAX calculations, dimensional slicing, and presentation.
+
+## 🥷 Key SKills Demonstrated
+
+This project demonstrates:
+
+Python ETL development
+
+extracting live broker data from Alpaca
+
+transforming raw order history into analytics-ready trade tables
+
+exporting reproducible CSV outputs for BI consumption
+
+Trading analytics
+
+FIFO trade reconstruction
+
+realized PnL logic
+
+expectancy, profit factor, win/loss analysis
+
+intraday timing analysis
+
+Power BI development
+
+DAX-based KPI modeling
+
+dimensional reporting with date/hour/weekday tables
+
+matrix heatmaps, time-series visuals, and performance dashboards
+
+## 🔑 Why This Project Matters
+
+Most trading dashboards stop at simple profit summaries.
+
+This project goes further by asking:
+
+when does the strategy work?
+
+where is the timing edge?
+
+which symbols actually contribute to results?
+
+how stable is the performance through time?
+
+By combining Python-based transformation logic with Power BI reporting, this project turns raw broker data into a reusable analytics workflow.
+
+## 🎛️ How to Refresh the Dashboard
+
+Update the YAML config with the desired date window and credentials
+
+Run the Python ingestion script
+Save or replace the generated CSV output in the connected OneDrive folder
+Open the Power BI report and refresh the dataset
+This makes it easy to rerun the pipeline and keep the dashboard current.
+
+## 👮 Security / Notes
+
+Real API credentials are not stored in this repository
+The tracked YAML file should be an example config only
+Sensitive or personal account details should be excluded from public sample data where needed
+
+##  📈 Future Improvements
+
+Possible next enhancements:
+
+broker-agnostic ingestion layer
+
+strategy tagging by setup type
+
+rolling expectancy / rolling win-rate windows
+
+drawdown depth and recovery duration measures
+
+database-backed storage instead of flat CSV export
