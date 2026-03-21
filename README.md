@@ -161,12 +161,9 @@ This page drills into intraday performance by symbol, specifically between 6:00 
 Built primarily from FACT_TRADES, it uses a line and clustered column chart to analyze PnL by hour and by symbol.
 
 This page answers:
-
-When do winning trades happen?
-
-Does timing edge vary across symbols?
-
-Are certain symbols stronger at specific hours?
+1. When do winning trades happen?
+2. Does timing edge vary across symbols?
+3. Are certain symbols stronger at specific hours?
 
 **04 – PnL Curve**
 
@@ -184,15 +181,11 @@ This project primarily relies on Python for transformation logic and Power BI fo
 
 Core model components include:
 
-FACT_TRADES
-
-DIM_HOUR
-
-DIM_WEEKDAY
-
-Calendar
-
-Audit Measures
+- FACT_TRADES
+- DIM_HOUR
+- DIM_WEEKDAY
+- Calendar
+- Audit Measures
 
 No SQL was used in this project. The heavy lifting is performed in Python, with Power BI handling DAX calculations, dimensional slicing, and presentation.
 
