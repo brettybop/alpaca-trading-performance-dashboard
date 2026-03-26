@@ -21,6 +21,11 @@ The report is designed to evaluate:
 - symbol-level profitability
 - performance over time
 
+This report is refreshed locally and published as a portfolio artifact:
+```
+link coming soon
+```
+
 ---
 
 ## 🧱 Architecture Overview
