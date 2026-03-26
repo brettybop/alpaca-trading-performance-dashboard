@@ -83,7 +83,7 @@ This project is built around a Python-to-Power-BI workflow:
 
 The Python script is the core data engine behind the dashboard.
 
-1. **Inputs**
+### 1. **Inputs**
 
 - Alpaca Order History
 - YAML configuration file containing:
@@ -94,7 +94,7 @@ The Python script is the core data engine behind the dashboard.
    - position size
    - optional symbol list
 
-2. **Transformations**
+### 2. **Transformations**
 
 The ETL script:
 - retrieves Alpaca order history
@@ -104,7 +104,7 @@ The ETL script:
 - calculates realized trade-level PnL
 - derives time-based features for BI analysis
 
-3. **Outputs**
+### 3. **Outputs**
 
 The script writes the following CSVs:
 - orders_pnl.csv
