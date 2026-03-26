@@ -122,11 +122,11 @@ The script writes the following CSVs:
 
 ## 🗐 Power BI Dashboard Pages
 
-### **Intro Page**
+### 📄 **Intro Page**
 
 A landing page for the report that introduces the project and serves as a navigation hub for the dashboard.
 
-### **01 – Performance Overview**
+### 📄 **01 – Performance Overview**
 
 This page provides the executive summary of the strategy via cards:
 
@@ -148,7 +148,7 @@ Key metrics include:
 - *Is the edge statistically and financially meaningful?*
 - *Which symbols are driving results?*
 
-### **02 – Time Heatmap**
+### 📄 **02 – Time Heatmap**
 
 This page uses `DIM_HOUR` and `DIM_WEEKDAY` with audit measures to visualize Total PnL in a heatmap matrix.
 
@@ -158,7 +158,7 @@ Green and red shading highlight the strongest and weakest time windows.
 - *Which days and hours produce the strongest performance?*
 - *Where does the strategy consistently lose money?*
 
-### **03 – Time by Symbol Analysis**
+### 📄 **03 – Time by Symbol Analysis**
 
 This page drills into intraday performance by symbol, specifically between 6:00 AM and 10:00 AM.
 
@@ -169,7 +169,7 @@ Built primarily from FACT_TRADES, it uses a line and clustered column chart to a
 - *Does timing edge vary across symbols?*
 - *Are certain symbols stronger at specific hours?*
 
-### **04 – PnL Curve**
+### 📄 **04 – PnL Curve**
 
 This page plots Total PnL over Date from the Calendar table.
 
