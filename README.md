@@ -25,7 +25,6 @@ This report is refreshed locally and published as a portfolio artifact:
 ```
 link coming soon
 ```
-
 ---
 
 ## 🧱 Architecture Overview
