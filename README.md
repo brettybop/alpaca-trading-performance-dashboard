@@ -124,7 +124,7 @@ A landing page for the report that introduces the project and serves as a naviga
 
 ### **01 – Performance Overview**
 
-This page provides the executive summary of the strategy.
+This page provides the executive summary of the strategy via cards:
 
 Key metrics include:
 - Win Rate
@@ -140,9 +140,9 @@ Key metrics include:
 - Average Hold Time
 
 **This page answers:**
-*1. How is the strategy performing overall?*
-*2. Is the edge statistically and financially meaningful?*
-*3. Which symbols are driving results?*
+- *1. How is the strategy performing overall?*
+- *2. Is the edge statistically and financially meaningful?*
+- *3. Which symbols are driving results?*
 
 ### **02 – Time Heatmap**
 
@@ -151,8 +151,8 @@ This page uses `DIM_HOUR` and `DIM_WEEKDAY` with audit measures to visualize Tot
 Green and red shading highlight the strongest and weakest time windows.
 
 **This page answers:**
-*1. Which days and hours produce the strongest performance?*
-*2. Where does the strategy consistently lose money?*
+- *1. Which days and hours produce the strongest performance?*
+- *2. Where does the strategy consistently lose money?*
 
 ### **03 – Time by Symbol Analysis**
 
@@ -161,9 +161,9 @@ This page drills into intraday performance by symbol, specifically between 6:00 
 Built primarily from FACT_TRADES, it uses a line and clustered column chart to analyze PnL by hour and by symbol.
 
 **This page answers:**
-*1. When do winning trades happen?*
-*2. Does timing edge vary across symbols?*
-*3. Are certain symbols stronger at specific hours?*
+- *1. When do winning trades happen?*
+- *2. Does timing edge vary across symbols?*
+- *3. Are certain symbols stronger at specific hours?*
 
 ### **04 – PnL Curve**
 
@@ -172,9 +172,9 @@ This page plots Total PnL over Date from the Calendar table.
 It provides a time-based view of performance and helps evaluate strategy consistency.
 
 **This page answers:**
-*1. How has performance evolved over time?*
-*2. Are returns steady or volatile?*
-*3. Where are the major drawdowns and recoveries?*
+- *1. How has performance evolved over time?*
+- *2. Are returns steady or volatile?*
+- *3. Where are the major drawdowns and recoveries?*
 
 ## 📝 Data Model Notes
 This project primarily relies on Python for transformation logic and Power BI for semantic modeling and measures.
@@ -219,9 +219,9 @@ By combining Python-based transformation logic with Power BI reporting, this pro
 
 Update the YAML config with the desired date window and credentials
 
-1.) Run the Python ingestion script
-2.) Save or replace the generated CSV output in the connected OneDrive folder
-3.) Open the Power BI report and refresh the dataset. Connector must point to the folder containing the CSV. Can setup gateway if needed.
+- 1.) Run the Python ingestion script
+- 2.) Save or replace the generated CSV output in the connected OneDrive folder
+- 3.) Open the Power BI report and refresh the dataset. Connector must point to the folder containing the CSV. Can setup gateway if needed.
 
 ## 👮 Security / Notes
 
