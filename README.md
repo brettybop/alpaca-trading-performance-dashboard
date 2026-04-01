@@ -23,7 +23,7 @@ The report is designed to evaluate:
 
 This report is refreshed locally and published as a portfolio artifact:
 ```
-link coming soon
+[Alpaca Trading Bot Performance Public Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMGU0Nzc5MDctMzQ3NC00M2MzLWJhZTQtMWFmOTY3ZDYxYzdiIiwidCI6IjJhMDkyZDhmLTNjNDktNDkwMy05ZTA2LThhNjU4MzY1YWI1OCIsImMiOjZ9)
 ```
 ---
 
