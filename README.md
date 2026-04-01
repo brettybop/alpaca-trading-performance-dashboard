@@ -24,7 +24,7 @@ The report is designed to evaluate:
 
 ### **Dashboard Link Below** 👇
 
-[Alpaca Trading Bot Performance Public Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMGU0Nzc5MDctMzQ3NC00M2MzLWJhZTQtMWFmOTY3ZDYxYzdiIiwidCI6IjJhMDkyZDhmLTNjNDktNDkwMy05ZTA2LThhNjU4MzY1YWI1OCIsImMiOjZ9)
+[Alpaca Trading Bot Performance Public BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMGU0Nzc5MDctMzQ3NC00M2MzLWJhZTQtMWFmOTY3ZDYxYzdiIiwidCI6IjJhMDkyZDhmLTNjNDktNDkwMy05ZTA2LThhNjU4MzY1YWI1OCIsImMiOjZ9)
 
 ---
 
