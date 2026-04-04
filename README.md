@@ -224,9 +224,9 @@ By combining Python-based transformation logic with Power BI reporting, this pro
 
 Update the YAML config with the desired date window and credentials
 
-- 1.) Run the Python ingestion script
-- 2.) Save or replace the generated CSV output in the connected OneDrive folder
-- 3.) Open the Power BI report and refresh the dataset. Connector must point to the folder containing the CSV. Can setup gateway if needed.
+1.) Run the Python ingestion script
+2.) Save or replace the generated CSV output in the connected OneDrive folder
+3.) Open the Power BI report and refresh the dataset. Connector must point to the folder containing the CSV. Can setup gateway if needed.
 
 ## 👮 Security / Notes
 
