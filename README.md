@@ -1,8 +1,6 @@
 # 🤖 Alpaca Trading Bot Performance Dashboard 📈
 
-A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting. 
-
-This project is part of my analytics portfolio and demonstrates how Python can be used to extract and shape live trading data, while Power BI handles modeling, DAX measures, and dashboard presentation.
+A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting.
 
 ---
 
