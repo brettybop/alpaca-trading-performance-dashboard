@@ -1,14 +1,10 @@
 # 🤖 Alpaca Trading Bot Performance Dashboard 📈
 
-A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting.
-
----
-
 ## 🎯 Project Objective
 
-Back-testing is one way to understand if a strategy performs, foward testing is how we can determine if strategy actually performs well in real time. The goal of this project is to answer a simple but important question:
+Back-testing is one way to understand if a strategy performs, foward testing is how we can determine if strategy actually performs well in real-time. The goal of this project is to answer a few simple questions:
 
-> Is this trading strategy actually performing well, and when does it perform best?
+> Is this trading strategy actually performing well, and when does it perform best? How can we improve or make it better?
 
 To answer that, I built a lightweight ETL workflow in Python that pulls Alpaca order history, converts order activity into trade-level analytics, and exports a CSV dataset that feeds a Power BI dashboard.
 
