@@ -4,13 +4,11 @@ A Python + Power BI project that transforms Alpaca order history into a clean tr
 
 This project is part of my analytics portfolio and demonstrates how Python can be used to extract and shape live trading data, while Power BI handles modeling, DAX measures, and dashboard presentation.
 
-We consider the merits of forward testing vs back-testing within the analysis of the dashboard and specifically in the **Time by Symbol Analysis Dashboard**.
-
 ---
 
 ## 🎯 Project Objective
 
-The goal of this project is to answer a simple but important question:
+Back-testing is one way to understand if a strategy performs, foward testing is how we can determine if strategy actually performs well in real time. The goal of this project is to answer a simple but important question:
 
 > Is this trading strategy actually performing well, and when does it perform best?
 
