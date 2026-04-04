@@ -1,4 +1,4 @@
-# Alpaca Trading Bot Performance Dashboard
+# 🤖 Alpaca Trading Bot Performance Dashboard 📈
 
 A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting. 
 
