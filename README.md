@@ -37,12 +37,12 @@ This project is built around a Python-to-Power-BI workflow:
    - Pulls order history from Alpaca
    - Reconstructs closed trades using FIFO logic
    - Derives BI-friendly fields such as:
-     - realized PnL
-     - win flag
-     - close date
-     - day of week
-     - hour of day
-     - holding time
+     - Realized PnL
+     - Win flag
+     - Close Date
+     - Day of Week
+     - Hour of Day
+     - Holding Time
    - Exports CSV outputs used by Power BI
 
 3. **OneDrive Refresh Layer**
