@@ -1,8 +1,10 @@
 # Alpaca Trading Bot Performance Dashboard
 
-A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting.
+A Python + Power BI project that transforms Alpaca order history into a clean trade-level dataset for performance analytics and interactive BI reporting. 
 
 This project is part of my analytics portfolio and demonstrates how Python can be used to extract and shape live trading data, while Power BI handles modeling, DAX measures, and dashboard presentation.
+
+We consider the merits of forward testing vs back-testing within the analysis of the dashboard and specifically in the **Time by Symbol Analysis Dashboard**.
 
 ---
 
@@ -15,11 +17,11 @@ The goal of this project is to answer a simple but important question:
 To answer that, I built a lightweight ETL workflow in Python that pulls Alpaca order history, converts order activity into trade-level analytics, and exports a CSV dataset that feeds a Power BI dashboard.
 
 The report is designed to evaluate:
-- overall strategy performance
-- trade quality and edge
-- intraday timing edge
-- symbol-level profitability
-- performance over time
+- Overall strategy performance
+- Trade quality and edge
+- Tntraday timing edge
+- Symbol-level profitability
+- Performance over time
 
 
 ### **Dashboard Link Below** 👇
