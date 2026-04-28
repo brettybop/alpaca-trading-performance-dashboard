@@ -59,7 +59,6 @@ This project is built around a Python-to-Power-BI workflow:
 ## 📁 Repository Structure
 
 ```text
-.
 ├─ README.md
 ├─ requirements.txt
 ├─ .gitignore
