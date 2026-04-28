@@ -191,7 +191,7 @@ This project primarily relies on Python for transformation logic and Power BI fo
 
 No SQL was used in this project. The heavy lifting is performed in Python, with Power BI handling DAX calculations, dimensional slicing, and presentation.
 
-## 🥷 Key SKills Demonstrated
+## 🥷 Key Skills Demonstrated
 
 **This project demonstrates:**
 - Python ETL development
