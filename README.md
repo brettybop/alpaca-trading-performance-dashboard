@@ -2,7 +2,7 @@
 
 In this project we utilize Python, Excel, and Power BI to transform Alpaca Trade Order History from one of my Paper Trading Accounts into a clean trade-level dataset for performance analytics and an interactive BI Dashboard.
 
----
+![Dashboard Preview](images/alpaca-performance-dashboard.png)
 
 ## 🎯 Project Objective
 
